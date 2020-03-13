@@ -1,4 +1,4 @@
-package com.patterns.GoF.behavioral.mediator;
+package com.patterns.GoF.behavioral.mediator.Atc;
 
 public class Atc implements IAtc {
     private Runway runway;

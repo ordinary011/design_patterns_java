@@ -1,4 +1,4 @@
-package com.patterns.GoF.behavioral.mediator;
+package com.patterns.GoF.behavioral.mediator.Atc;
 
 public class Flight implements Command {
     private IAtc atcMediator;

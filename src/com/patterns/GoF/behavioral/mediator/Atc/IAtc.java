@@ -1,4 +1,4 @@
-package com.patterns.GoF.behavioral.mediator;
+package com.patterns.GoF.behavioral.mediator.Atc;
 
 public interface IAtc {
     public void registerFlight(Flight flight);

@@ -3,7 +3,10 @@ package com.patterns.GoF.behavioral.chainOfResponsibility;
 public class MsgPrinterDemo {
     public static void main(String[] args) {
         MsgPrinter msgPrinter = new ConsoleMsgPrinter();
-        msgPrinter.setNextMsgPrinter(msgPrinter);
+        FileMsgPrinter fileMsgPrinter = new FileMsgPrinter();
+        msgPrinter.setNextMsgPrinter(fileMsgPrinter);
+        fileMsgPrinter.setNextMsgPrinter(new DBMsgPrinter());
+        msgPrinter.print("hello");
     }
 }
 
@@ -15,9 +18,9 @@ abstract class MsgPrinter {
     }
 
     void print(String msg) {
-        nextMsgPrinter.printMsg(msg);
+        printMsg(msg);
         if (nextMsgPrinter != null) {
-            nextMsgPrinter.printMsg(msg);
+            nextMsgPrinter.print(msg);
         }
     }
 
