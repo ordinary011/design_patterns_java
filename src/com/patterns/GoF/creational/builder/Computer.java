@@ -1,7 +1,6 @@
 package com.patterns.GoF.creational.builder;
 
 public class Computer {
-
     //required parameters
     private String HDD;
     private String RAM;
