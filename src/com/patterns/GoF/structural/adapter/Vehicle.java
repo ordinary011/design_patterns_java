@@ -3,6 +3,7 @@ package com.patterns.GoF.structural.adapter;
 public class Vehicle {
     public static void main(String[] args) {
         CarWash carWash = new CarWash();
+        carWash.washVehicle(new Audi());
         carWash.washVehicle(new TruckWrapper(new MyTruck()));
     }
 }
