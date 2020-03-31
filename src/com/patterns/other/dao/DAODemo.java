@@ -1,4 +1,4 @@
-package com.patterns;
+package com.patterns.other.dao;
 
 public class DAODemo {
     static DB storage = new DB();
